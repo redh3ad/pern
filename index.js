@@ -16,7 +16,6 @@ app.use(
   cors({
     origin: ['https://pern-server-peach.vercel.app'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
   }),
 );
 app.use(express.json());
