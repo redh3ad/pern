@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 //middleware
 app.use(
   cors({
-    origin: ['https://pern-server-peach.vercel.app'],
+    origin: ['https://pern-iota.vercel.app/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
   }),
 );
