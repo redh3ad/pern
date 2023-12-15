@@ -6,7 +6,9 @@ const ListTodos = () => {
 
   const getTodos = async () => {
     try {
-      const response = await fetch('/todos');
+      const response = await fetch(
+        'https://pern-server-peach.vercel.app/todos',
+      );
       const jsonData = await response.json();
 
       setTodos(jsonData);
@@ -18,9 +20,12 @@ const ListTodos = () => {
   //delete
   const deleteTodo = async (id) => {
     try {
-      const deletedTodo = await fetch(`/todos/${id}`, {
-        method: 'DELETE',
-      });
+      const deletedTodo = await fetch(
+        `https://pern-server-peach.vercel.app/todos/${id}`,
+        {
+          method: 'DELETE',
+        },
+      );
 
       setTodos(todos.filter((todo) => todo.todo_id !== id));
     } catch (error) {
