@@ -5,11 +5,11 @@ const pool = require('./db');
 const path = require('path');
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
-}
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, 'client/build')));
+// }
 
 //middleware
 app.use(cors());
